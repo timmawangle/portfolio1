@@ -37,12 +37,12 @@ body {
 }
 
 .nav_item a {
-    color: black;
+    color: rgb(54, 54, 54);
     text-decoration: none;
 }
 
 .nav_item {
-    color: black;
+    color: rgb(54, 54, 54);
     text-decoration: none;
     padding: 10px;
 }
@@ -62,20 +62,23 @@ header {
 }
 
 h1 {
-    font-family: 'Futura';
-    color: black;
+    /*font-family: 'Futura';*/
+    color: rgb(54, 54, 54);
     padding-left: 80px;
     font-size: 50px;
 }
 
 h2 {
-    padding: 150px 80px 10px;
+    padding: 150px 150px 10px;
+    color: rgb(54, 54, 54);
     font-size: 80px;
+    font-style: bold;
     /*background-color: rgb(219, 219, 219);*/
 }
 
 p {
-    padding: 0px 80px;
+    color: rgb(54, 54, 54);
+    padding: 0px 150px;
     padding-bottom: 150px;
     font-size: 20px;
     /*background-color: rgb(219, 219, 219);*/
@@ -101,7 +104,7 @@ div {
 .learn_more_bio {
     background-color: cornflowerblue;
     position: relative;
-    left: 80px;
+    left: 150px;
     top: -100px;
     text-align: center;
     line-height: 30px;
@@ -146,4 +149,5 @@ footer {
     width: 100%;
     text-align: center;
     padding: 30px;
+    color: rgb(54, 54, 54);
 }
