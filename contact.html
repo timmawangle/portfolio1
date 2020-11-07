@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Google+Sans" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <title>T.WANG</title>
+        <title>CONTACT</title>
     </head>
     <body>
         <div class = "skip"><a href = "#main">Skip to Main Content</a></div>
@@ -21,13 +21,61 @@
                     <li class = "nav_item"><a href = "index.html">HOME</a></li>
                     <li class = "nav_item"><a href = "about.html">ABOUT</a></li>
                     <li class = "nav_item"><a href = "projects.html">PROJECTS</a></li>
-                    <li class = "nav_item"><a href = "contact.html">CONTACT</a></li>
+                    <li class = "nav_item"><a href = "contact.html" class = "current">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
 
+        <form action="https://formspree.io/f/xayljwda" id = "main" method="POST">
+            <fieldset>
+              <legend>Form</legend>
+              <label for="name_id">Your Name</label>
+              <input type="text" 
+                  name ="name"
+                  id = "name_id"
+                  placeholder="Enter Your Name" required>
+          
+              <label for="email_id">Your Email</label>
+              <input type="email" 
+                  name = "email"
+                  id = "email_id"
+                  placeholder="Enter Your Email" required>
+          
+          
+              <label for="phone_id">Your Phone Number</label>
+              <input type="tel" 
+                  name = "phone"
+                  id = "phone_id"
+                  placeholder="123-456-7890"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          
+              <label for="message_id">Message</label>
+          
+              <textarea name = "Message" i
+                        d = "message_id"
+                        placeholder="Enter Your Message" required></textarea>
+          
+              <label for="remember_id">Remember me</label>
+              <input type="checkbox" name = "Remember" id = "remember_id"> 
+          
+              <input type="submit" value = "Contact Me">
+            </fieldset>
+        </form>
+
+        <div class = "gcontainer">
+            <div class="img-1"><img src="imgs/vote.jpg" alt="voting sign"/></div>
+            <div class="img-2"><img src="imgs/movein.jpg" alt="moving into dorm"/></div>
+            <div class="img-3"><img src="imgs/rtv.jpg" alt="riding rtv" /></div>
+            <div class="img-4"><img src="imgs/sunset.JPEG" alt="sunset picture" /></div>
+            <div class="img-5"><img src="imgs/lights.JPG" alt="car lights photograph" /></div>
+            <div class="img-6"><img src="imgs/nyc.JPG" alt="snowy picture of NYC" /></div>
+            <div class="img-7"><img src="imgs/trees.jpg" alt="black and white picture of tree branches" /></div>
+            <div class="img-8"><img src="imgs/curling.JPG" alt="curling at ice arena" /></div>
+            <div class="img-9"><img src="imgs/yoth.jpg" alt="standing portrait" /></div>
+        </div>
+
         <footer>
-            Made with ❤️ By Tim Wang 2020 &copy
+            <p>Made with ❤️ By Tim Wang 2020 &copy</p>
         </footer>
     </body>
 </html>
