@@ -5,10 +5,16 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     color: rgb(54, 54, 54);
+    background-color: rgb(243, 243, 243);
+}
+
+#main:focus {
+    outline: none;
+    border: none;
 }
 
 .skip a {
-    background: white;
+    background: rgb(243, 243, 243);
     left: 0;
     padding: 6px;
     -webkit-transition: top 0.3s ease-out;
@@ -22,10 +28,6 @@ body {
     top: 0px;
 }
 
-:focus {
-    border: 2px solid;
-}
-
 .nav_links {
     display: flex;
     flex-direction: column;
@@ -37,14 +39,14 @@ body {
 .nav_item a {
     color: rgb(54, 54, 54);
     text-decoration: none;
-    padding: 5px 20px;
+    padding: 3px 15px;
     border-radius: 30px;
 }
 
 .nav_item {
     color: rgb(54, 54, 54);
     text-decoration: none;
-    padding: 9px;
+    padding: 7px;
 }
 
 .nav_item a:hover, a:focus {
@@ -59,7 +61,7 @@ body {
     color: cornflowerblue;
     transform: translate(-50% -50%);
     border-radius: 30px;
-    padding: 5px 20px;
+    padding: 3px 15px;
     box-shadow: inset -9px -9px 9px 0 rgba(255, 255, 255, 0.4), 
                 inset 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
 }
@@ -112,26 +114,27 @@ header h1 {
     text-align: center;
     line-height: 30px;
     font-size: 13px;
-    color: white;
+    color: rgb(243, 243, 243);
     width: 200px;
     height: 30px;
     border-radius: 12px;
+    box-shadow: -9px -9px 9px 0 rgba(255, 255, 255, 0.568), 
+                 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
 }
 
 .learn_more_bio:hover {
-    /*background-color: rgb(206, 206, 206);*/
     background-color: rgba(100, 148, 237, 0.75);
     color: cornflowerblue;
     cursor: pointer;
 }
 
 .learn_more_bio a {
-    color: white;
+    color: rgb(243, 243, 243);
     text-decoration: none;
 }
 
 .container {
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(243, 243, 243);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -155,32 +158,37 @@ img {
 
 /* ABOUT.HTML */
 .about_me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
     margin-left: 20px;
     margin-right: 20px;
-    padding: 50px 50px;
-    height: 440px;
-    background-color: white;
+    padding: 1.5em;
+    background-color: rgb(243, 243, 243);
     color: rgb(54, 54, 54);
     transform: translate(-50% -50%);
     border-radius: 30px;
-    box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.4), 
-                 12px 12px 12px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: -9px -9px 9px 0 rgba(255, 255, 255, 0.568), 
+                 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
 }
 
-.about_me h1, .about_me p {
-    text-align: center;
-    position: relative;
-    left: 50%;
-    top: -439px;
-    background-color:white;;
-    width: 50%;
-    padding: 20px;
+.about_me h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 1rem;
+}
+
+.about_me p {
     font-size: 13px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    line-height: 1.5rem;
 }
 
 .tim {
-    border-radius: 30px;
-    max-width: 50%;
+    border-radius: 5px;
+    max-width: 100%;
     height: auto;
 }
 
@@ -192,7 +200,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: rgb(243, 243, 243);
 }
 
 .links a {
@@ -202,7 +210,7 @@ img {
     padding: 5px 20px;
     border-radius: 12px;
     margin: 10px;
-    color: white;
+    color: rgb(243, 243, 243);
     font-size: 13px;
 }
 
@@ -211,6 +219,17 @@ img {
 }
 
 @media screen and (min-width: 850px){
+
+    .about_me h1 {
+        font-size: 60px;
+    }
+
+    .about_me p {
+        font-size: 15px;
+        line-height: 3rem;
+        padding: 1.5rem;
+    }
+
     header h1 {
         /*font-family: 'Futura';*/
         color: rgb(54, 54, 54);
@@ -238,7 +257,7 @@ img {
     }
 
     .container {
-        background-color: rgb(219, 219, 219);
+        background-color: rgb(243, 243, 243);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 400px 400px 400px 400px;
@@ -270,7 +289,7 @@ img {
 
 /* PROJECTS PAGE */
 .projects {
-    background-color: white;
+    background-color: rgb(243, 243, 243);
     margin: 20px;
     padding: 20px;
 }
@@ -291,7 +310,7 @@ img {
 
 /*FORM STYLING*/
 form {
-    border: 3px solid #f1f1f1;
+    border: 3px solid rgb(243, 243, 243);
     border-radius: 30px;
     padding: 60px;
 }
@@ -339,7 +358,7 @@ input[type=checkbox]{
   
 input[type=submit] {
     background-color: cornflowerblue;
-    color: white;
+    color: rgb(243, 243, 243);
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -351,12 +370,6 @@ input[type=submit]:hover {
     opacity: 0.8;
 }
 
-label[for="message_id"] {
-    position: relative;
-    top: -120px;
-}
-  
-  
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (min-width: 770px) {
     form{
@@ -371,15 +384,20 @@ label[for="message_id"] {
     textarea{
       width:80%;
       height: 25vh;
-   }
+    }
+
+    label[for="message_id"] {
+        position: relative;
+        top: -120px;
+    }
 }
 
 .gcontainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /*grid-template-rows: 300px 300px 300px;
     grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-row-gap: 10px;*/
     margin: 20px;
     width: 95vw;
     overflow: hidden;
@@ -389,11 +407,12 @@ label[for="message_id"] {
     object-fit: cover;
     display: block;
     max-width: 400px;
-    max-height: 500px;
+    max-height: 400px;
     width: auto;
     height: auto;
 }
 
+/*
 .img-1 {
     grid-column: 1 / 2;
     grid-row: 1 /2;
@@ -423,6 +442,7 @@ label[for="message_id"] {
 .img-9 {
     grid-column: 3 / 4;
 }
+*/
 
 footer {
     display: flex;
@@ -433,7 +453,7 @@ footer {
     font-size: 13px;
     position: relative;
     bottom: 0;
-    width: 100vw;
+    width: 95vw;
     text-align: center;
     padding: 30px 0px;
     color: rgb(54, 54, 54);
