@@ -29,11 +29,12 @@ body {
 }
 
 .nav_links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    padding-right: 80px;
+    /*
+    position: absolute;
+    top: 17px;
+    left: 80%;
+    right: 80px;
+    */
 }
 
 .nav_item a {
@@ -47,6 +48,7 @@ body {
     color: rgb(54, 54, 54);
     text-decoration: none;
     padding: 7px;
+    font-size: 13px;
 }
 
 .nav_item a:hover, a:focus {
@@ -68,57 +70,77 @@ body {
 
 header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    /*border-bottom: 0.2px solid rgb(211, 211, 211);*/
+    align-items: center;
+    padding: 10px 30px;
     transform: translate(-50% -50%);
     border-radius: 30px;
-    box-shadow: -9px -9px 9px 0 rgba(255, 255, 255, 0.4), 
-                 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
-    margin: 20px;
+    box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.8), 
+                 12px 12px 12px 0 rgba(0, 0, 0, 0.05);
+    margin: 10px;
 }
 
 header h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-style: italic;
     color: rgb(54, 54, 54);
-    padding: 25px 80px;
-    font-size: 60px;
+    font-size: 40px;
+}
+
+@media screen and (max-width: 500px) {
+    .nav-links {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+    }
 }
 
 .intro h2 {
-    padding: 100px 150px 10px;
+    padding: 15% 15% 10px;
     color: rgb(54, 54, 54);
-    font-size: 80px;
+    font-size: 65px;
     font-style: bold;
-    /*background-color: rgb(219, 219, 219);*/
 }
 
 .intro p {
     color: rgb(54, 54, 54);
-    padding: 0px 150px;
-    padding-bottom: 150px;
-    font-size: 20px;
-    /*background-color: rgb(219, 219, 219);*/
+    margin: 0px 15%;
+    font-size: 16px;
 }
 
 .intro p b {
     color: cornflowerblue;
 }
 
+.more_buttons {
+    display: flex;
+    font-size: 8px;
+    padding: 5% 15%;
+    padding-bottom: 20%;
+}
+
+
 .learn_more_bio {
     background-color: cornflowerblue;
-    position: relative;
-    left: 150px;
-    top: -100px;
     text-align: center;
     line-height: 30px;
-    font-size: 13px;
     color: rgb(243, 243, 243);
-    width: 200px;
+    width: 150px;
     height: 30px;
-    border-radius: 12px;
-    box-shadow: -9px -9px 9px 0 rgba(255, 255, 255, 0.568), 
+    border-radius: 30px;
+    box-shadow: -9px -9px 9px 0 rgba(255, 255, 255, 0.8), 
+                 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
+    margin-right: 20px;
+}
+
+.more_projects {
+    text-align: center;
+    line-height: 30px;
+    width: 150px;
+    height: 30px;
+    border-radius: 30px;
+    box-shadow: -9px -9px 9px 0 rgba(255, 255, 255, 0.8), 
                  9px 9px 9px 0 rgba(0, 0, 0, 0.05);
 }
 
@@ -128,8 +150,23 @@ header h1 {
     cursor: pointer;
 }
 
+.more_projects:hover {
+    background-color: rgb(240, 240, 240);;
+    cursor: pointer;
+}
+
+.more_projects:active {
+    box-shadow: inset -9px -9px 9px 0 rgba(255, 255, 255, 0.8), 
+                inset 9px 9px 9px 0 rgba(100, 100, 100, 0.01);
+}
+
 .learn_more_bio a {
     color: rgb(243, 243, 243);
+    text-decoration: none;
+}
+
+.more_projects a {
+    color: cornflowerblue;
     text-decoration: none;
 }
 
@@ -137,9 +174,6 @@ header h1 {
     background-color: rgb(243, 243, 243);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    margin: auto;
-    width: 95vw;
 }
 
 div {
@@ -151,8 +185,8 @@ div {
 }
 
 img {
-    height: 800px;
-    width: 800px;
+    max-height: 800px;
+    width: 1000px;
 }
 
 
@@ -218,7 +252,38 @@ img {
     background-color: rgba(100, 148, 237, 0.75);
 }
 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 480px){
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        transform: translate(-50% -50%);
+        border-radius: 30px;
+        box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.8), 
+                     12px 12px 12px 0 rgba(0, 0, 0, 0.05);
+        margin: 10px;
+    }
+    
+    header h1 {
+        color: rgb(54, 54, 54);
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 1050px){
+
+    header {
+        padding: 5px 35px;
+    }
+
+    .intro h2 {
+        font-size: 80px;
+    }
+    
+    .intro p {
+        font-size: 20px;
+    }
 
     .about_me h1 {
         font-size: 60px;
@@ -231,22 +296,13 @@ img {
     }
 
     header h1 {
-        /*font-family: 'Futura';*/
         color: rgb(54, 54, 54);
-        padding-left: 80px;
-        padding-right: 80px;
-        padding-top: 0px;
-        padding-bottom: 0px;
         font-size: 50px;
     }
 
     .nav_links {
         display: flex;
         flex-direction: row;
-        padding-right: 80px;
-        padding-left: 80px;
-        padding-top: 8px;
-        padding-bottom: 8px;
         font-size: 15px;
     }
 
@@ -254,6 +310,13 @@ img {
         color: rgb(54, 54, 54);
         text-decoration: none;
         padding: 10px;
+    }
+
+    .more_buttons {
+        transform: scale(1.5);
+        position: relative;
+        left:17.4%;
+        top: 50px;
     }
 
     .container {
