@@ -68,6 +68,7 @@ body {
     text-decoration: none;
     padding: 3px 12px;
     border-radius: 30px;
+    font-weight: 500;
 }
 
 .nav_item {
@@ -120,20 +121,20 @@ header h1 {
 }
 
 .intro {
-    height: 93vh;
+    height:80vh;
 }
 
 .intro h2 {
-    padding: 25vh 15% 10px;
+    padding: 20vh 15% 10px;
     color: rgb(54, 54, 54);
-    font-size: 65px;
+    font-size: 50px;
     font-style: bold;
 }
 
 .intro p {
     color: rgb(54, 54, 54);
     margin: 0px 15%;
-    font-size: 16px;
+    font-size: 25px;
 }
 
 .intro p b {
@@ -142,9 +143,8 @@ header h1 {
 
 .more_buttons {
     display: flex;
-    font-size: 10px;
-    padding: 5% 15%;
-    padding-bottom: 20%;
+    font-size: 8px;
+    padding: 40px 15% 15vh;
 }
 
 
@@ -222,69 +222,101 @@ img {
 }
 
 
+
+
+
 /* ABOUT.HTML */
 .about_me {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-column-gap: 1rem;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 1.5em;
-    background-color: rgb(243, 243, 243);
-    color: rgb(54, 54, 54);
-    transform: translate(-50% -50%);
-    border-radius: 30px;
-    box-shadow: -9px -9px 9px 0 rgba(255, 255, 255, 0.568), 
-                 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
+    padding: 2em;
+    padding-bottom: 0.5em;
 }
 
 .about_me h1 {
     text-transform: uppercase;
     font-size: 30px;
-    padding: 1rem;
+    margin-top: 2rem;
 }
 
 .about_me p {
     font-size: 13px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
+    padding: 1rem;
     line-height: 1.5rem;
 }
 
 .tim {
-    border-radius: 5px;
     max-width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
 }
 
 .links {
     text-align: center;
-    height: 50px;
+    height: auto;
     padding: 10px 20px;
     margin: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(243, 243, 243);
 }
 
 .links a {
     background-color: cornflowerblue;
     color: rgb(54, 54, 54);
     text-decoration: none;
-    padding: 5px 20px;
-    border-radius: 12px;
-    margin: 10px;
+    padding: 15px 70px;
+    border-radius: 30px;
+    margin: 20px;
     color: rgb(243, 243, 243);
     font-size: 13px;
 }
 
-.links a:hover {
+.links a:hover{
     background-color: rgba(100, 148, 237, 0.75);
 }
 
+
+/* PROJECTS PAGE */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 1rem;
+    padding: 10vh 2.5em 10vh;
+    font-size: 13px;
+    justify-content: center;
+}
+
+.projects img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.ht {
+    margin-top: 20vh;
+}
+
+.projects h1 {
+    font-size: 30px;
+    margin: 2rem 0px 0px;
+}
+
+.projects p {
+    padding: 16px;
+    line-height: 1.5rem;
+}
+
+
+
+
 @media screen and (min-width: 600px){
+    .projects {
+        grid-template-columns: 400px;
+    }
+
     .hamburger {
         display: none;
     }
@@ -313,20 +345,103 @@ img {
         pointer-events: all;
         transition: none;
     }
+
+    .intro h2 {
+        font-size: 60px;
+    }
+
+    .intro p {
+        font-size: 30px;
+    }
+
+    .more_buttons {
+        transform: scale(1.5);
+        position: relative;
+        left:17.4%;
+        top: 40px;
+    }
+
+    .about_me {
+        display: grid;
+        grid-template-columns: 250px 300px;
+        grid-column-gap: 1rem;
+        margin: 0px;
+        padding: 0px 2em 0px;
+        margin-top: 7vh;
+        height: 70vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about_me h1 {
+        text-transform: uppercase;
+        font-size: 30px;
+        padding: 1rem;
+        padding-right: 0px;
+    }
+    
+    .about_me p {
+        font-size: 10px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 0px;
+        line-height: 1rem;
+    }
+    
+    .tim {
+        object-fit: cover;
+        max-width: 100%;
+        height: 400px;
+    }
+
+    .links {
+        flex-direction: row;
+        height: 50px;
+    }
 }
 
 @media screen and (min-width: 1050px){
+
+    .projects {
+        grid-template-columns: 400px 500px;
+        grid-template-rows: 400px 400px;
+        grid-column-gap: 2rem;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 7vh;
+        margin-bottom: 7vh;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .projects h1 {
+        margin: 0px;
+    }
+ 
+    .projects img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    .ht {
+        grid-column: 1 /span 1;
+        grid-row: 2 /span 1;
+    }
 
     header {
         padding: 5px 35px;
     }
 
     .intro h2 {
-        font-size: 80px;
+        font-size: 60px;
     }
     
     .intro p {
-        font-size: 20px;
+        font-size: 35px;
     }
 
     .about_me h1 {
@@ -334,7 +449,7 @@ img {
     }
 
     .about_me p {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 3rem;
         padding: 1.5rem;
     }
@@ -386,27 +501,40 @@ img {
         grid-row: 3 / 5;
     }
     
-}
 
-/* PROJECTS PAGE */
-.projects {
-    background-color: rgb(243, 243, 243);
-    margin: 20px;
-    padding: 20px;
-}
+    .about_me {
+        display: grid;
+        grid-template-columns: 400px 500px;
+        grid-column-gap: 1rem;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 7vh;
+        height: 70vh;
+        justify-content: center;
+        align-items: center;
+    }
 
-.projects img {
-    margin-top: 50px;
-    width: 100%;
-    height: auto;
-}
-
-.projects h1, .projects h2 {
-    margin-top: 50px;
-}
-
-.projects p {
-    margin: 10px;
+    .about_me h1 {
+        text-transform: uppercase;
+        font-size: 30px;
+        padding: 1rem;
+        padding-right: 0px;
+    }
+    
+    .about_me p {
+        font-size: 13px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 0px;
+        line-height: 1.5rem;
+    }
+    
+    .tim {
+        object-fit: cover;
+        max-width: 100%;
+        height: 500px;
+    }
 }
 
 /*FORM STYLING*/
@@ -417,19 +545,21 @@ form {
 }
   
 legend { 
-    font-size: 125%;
-    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 600;
     text-align: center;
+    margin-bottom: 20px;
 }
   
 label{
     display: inline-block;
     margin-right:10px;
     width:15%;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 input {
+    font-size: 10px;
     font-family: 'Poppins', sans-serif;
     width: 100%;
     padding: 12px 20px;
@@ -442,8 +572,9 @@ input {
 
 textarea{
     font-family: 'Poppins', sans-serif;
+    font-size: 10px;
     width: 100%;
-    height: 35vh;
+    height: 10vh;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -458,23 +589,31 @@ input[type=checkbox]{
 }
   
 input[type=submit] {
-    background-color: cornflowerblue;
-    color: rgb(243, 243, 243);
+    background-color: rgb(243, 243, 243);
+    color: rgb(54, 54, 54);
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 30px 0px;
     border: none;
     cursor: pointer;
     width: 100%;
+    transform: translate(-50% -50%);
+    box-shadow: -9px -9px 9px 0 rgba(255, 255, 255, 0.8), 
+                 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
 }
   
 input[type=submit]:hover {
     opacity: 0.8;
 }
 
+input[type=submit]:active {
+    box-shadow: inset -9px -9px 9px 0 rgba(255, 255, 255, 0.8), 
+                inset 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
+}
+
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (min-width: 770px) {
     form{
-      width: 80%;
+      width: 40%;
       margin: 0 auto;
     }
   
@@ -484,12 +623,12 @@ input[type=submit]:hover {
   
     textarea{
       width:80%;
-      height: 25vh;
+      height: 10vh;
     }
 
-    label[for="message_id"] {
-        position: relative;
-        top: -120px;
+    div + label {
+        line-height: 5vh;
+        vertical-align: top;
     }
 }
 
@@ -553,7 +692,7 @@ footer {
     height: 60px;
     font-size: 13px;
     position: relative;
-    bottom: 0;
+    bottom: 0px;
     width: 100vw;
     text-align: center;
     padding: 30px 0px;
