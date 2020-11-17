@@ -107,7 +107,7 @@ header {
 .hamburger {
     position: absolute;
     cursor: pointer;
-    right: 27px;
+    right: 5px;
     top: 10px;
     z-index: 2;
 }
