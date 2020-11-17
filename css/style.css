@@ -5,16 +5,16 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     color: rgb(54, 54, 54);
-    background-color: rgb(243, 243, 243);
+    background-color: #f0f0f3;
 }
 
 #main:focus {
     outline: none;
-    border: none;
+    border: none;   
 }
 
 .skip a {
-    background: rgb(243, 243, 243);
+    background: #f0f0f3;
     left: 0;
     padding: 6px;
     -webkit-transition: top 0.3s ease-out;
@@ -44,7 +44,7 @@ body {
     left: 0px;
     height: 100vh;
     width: 100%;
-    background-color: rgb(243, 243, 243);
+    background-color: #f0f0f3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,7 +67,7 @@ body {
     color: rgb(54, 54, 54);
     text-decoration: none;
     padding: 3px 12px;
-    border-radius: 30px;
+    border-radius: 4px;
     font-weight: 500;
 }
 
@@ -78,29 +78,30 @@ body {
 }
 
 .nav_item a:hover, a:focus {
-    color: rgba(61, 61, 61, 0.692);
-    transition: color .1s ease-in-out;
     border: none;
-    box-shadow: inset -9px -9px 9px 0 rgba(255, 255, 255, 0.4), 
-                inset 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
+    background-color: #dbdbdb;
+    transition: background-color .2s ease-in;
+    /*box-shadow: inset -9px -9px 9px 0 rgba(255, 255, 255, 0.4), 
+                inset 9px 9px 9px 0 rgba(0, 0, 0, 0.05);*/
 }
 
 .nav_item a.current {
     color: cornflowerblue;
-    transform: translate(-50% -50%);
-    border-radius: 30px;
+    /*border-radius: 30px;*/
     padding: 3px 12px;
-    box-shadow: inset -9px -9px 9px 0 rgba(255, 255, 255, 0.4), 
-                inset 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
+    /*box-shadow: inset -9px -9px 9px 0 rgba(255, 255, 255, 0.4), 
+                inset 9px 9px 9px 0 rgba(0, 0, 0, 0.05);*/
 }
 
 header {
     position: relative;
-    padding: 10px 30px;
+    padding: 10px 10px;
+    /*
     border-radius: 30px;
     box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.8), 
                  12px 12px 12px 0 rgba(0, 0, 0, 0.05);
-    margin: 10px;
+    */
+    margin: 30px;
 }
 
 .hamburger {
@@ -150,23 +151,24 @@ header h1 {
     background-color: cornflowerblue;
     text-align: center;
     line-height: 30px;
-    color: rgb(243, 243, 243);
+    color: #f0f0f3;
     width: 150px;
     height: 30px;
-    border-radius: 30px;
-    box-shadow: -9px -9px 9px 0 rgba(255, 255, 255, 0.8), 
-                 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    /*box-shadow: -9px -9px 9px 0 rgba(255, 255, 255, 0.8), 
+                 9px 9px 9px 0 rgba(0, 0, 0, 0.05);*/
     margin-right: 20px;
 }
 
 .more_projects {
-    text-align: center;
+    font-size: 8px;
+    
     line-height: 30px;
     width: 150px;
     height: 30px;
-    border-radius: 30px;
+    /*border-radius: 30px;
     box-shadow: -9px -9px 9px 0 rgba(255, 255, 255, 0.8), 
-                 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
+                 9px 9px 9px 0 rgba(0, 0, 0, 0.05);*/
 }
 
 .learn_more_bio:hover {
@@ -175,11 +177,7 @@ header h1 {
     cursor: pointer;
 }
 
-.more_projects:hover {
-    background-color: rgb(240, 240, 240);;
-    cursor: pointer;
-}
-
+/*
 .more_projects:active {
     box-shadow: inset -9px -9px 9px 0 rgba(255, 255, 255, 0.8), 
                 inset 9px 9px 9px 0 rgba(100, 100, 100, 0.01);
@@ -188,10 +186,10 @@ header h1 {
 .learn_more_bio:active {
     box-shadow: inset -9px -9px 9px 0 rgba(100, 148, 237, 0.788), 
                 inset 9px 9px 9px 0 rgba(100, 100, 100, 0.01);
-}
+}*/
 
 .learn_more_bio a {
-    color: rgb(243, 243, 243);
+    color: #f0f0f3;
     text-decoration: none;
 }
 
@@ -200,8 +198,13 @@ header h1 {
     text-decoration: none;
 }
 
+.more_projects a:hover {
+    text-decoration: underline;
+}
+
 .container {
-    background-color: rgb(243, 243, 243);
+    margin: 0px 10% 0px;
+    background-color: #f0f0f3;
     display: grid;
     grid-template-columns: 85vw;
     grid-template-rows: 400px 400px 400px 400px;
@@ -271,9 +274,9 @@ img {
     color: rgb(54, 54, 54);
     text-decoration: none;
     padding: 15px 70px;
-    border-radius: 30px;
+    border-radius: 4px;
     margin: 20px;
-    color: rgb(243, 243, 243);
+    color: #f0f0f3;
     font-size: 13px;
 }
 
@@ -354,7 +357,7 @@ img {
 
         position: static;
         height: 31px;
-        width: 320px;
+        width: 330px;
         flex-direction: row;
         align-items: center;
         display: flex;
@@ -375,7 +378,8 @@ img {
     }
 
     .container {
-        grid-template-columns: 350px 350px;
+        margin: 0px 15% 0px;
+        grid-template-columns: 100%;
         grid-column-gap: 50px;
         grid-row-gap: 50px;
         grid-template-rows: 350px 350px;
@@ -383,7 +387,7 @@ img {
     }
     
     img {
-        width: 400px;
+        width: 100%;
         height: 400px;
     }
 
@@ -479,11 +483,13 @@ img {
     }
 
     .container {
-        grid-template-columns: 600px 600px;
+        margin: 0px 15% 0px;
+        grid-template-columns: 50% 50%/*600px 600px*/;
         grid-column-gap: 60px;
         grid-row-gap: 60px;
         grid-template-rows: 600px 600px;
         justify-content: center;
+        
     }
     
     img {
@@ -550,7 +556,7 @@ img {
 /*FORM STYLING*/
 form {
     margin-top: 7vh;
-    border: 3px solid rgb(243, 243, 243);
+    border: 3px solid #f0f0f3;
     border-radius: 30px;
     padding: 60px;
 }
@@ -578,7 +584,7 @@ input {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    border-radius: 30px;
+    border-radius: 6px;
 }
 
 textarea{
@@ -591,7 +597,7 @@ textarea{
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    border-radius: 30px;
+    border-radius: 6px;
 }
 
 input[type=checkbox]{
@@ -600,25 +606,17 @@ input[type=checkbox]{
 }
   
 input[type=submit] {
-    background-color: rgb(243, 243, 243);
-    color: rgb(54, 54, 54);
+    background-color: cornflowerblue;
+    color: #f0f0f3;
     padding: 14px 20px;
     margin: 30px 0px;
     border: none;
     cursor: pointer;
     width: 100%;
-    transform: translate(-50% -50%);
-    box-shadow: -9px -9px 9px 0 rgba(255, 255, 255, 0.8), 
-                 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
 }
   
 input[type=submit]:hover {
     opacity: 0.8;
-}
-
-input[type=submit]:active {
-    box-shadow: inset -9px -9px 9px 0 rgba(255, 255, 255, 0.8), 
-                inset 9px 9px 9px 0 rgba(0, 0, 0, 0.05);
 }
 
 /* Change styles for span and cancel button on extra small screens */
