@@ -3,14 +3,22 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: rgb(54, 54, 54);
     background-color: #f0f0f3;
 }
 
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 #main:focus {
     outline: none;
-    border: none;   
+    border: none;
 }
 
 .skip a {
@@ -77,10 +85,11 @@ body {
     padding: 10px;
 }
 
-.nav_item a:hover, a:focus {
+.nav_item a:hover,
+a:focus {
     border: none;
     background-color: #dbdbdb;
-    transition: background-color .2s ease-in;
+    transition: background-color 0.2s ease-in;
     /*box-shadow: inset -9px -9px 9px 0 rgba(255, 255, 255, 0.4), 
                 inset 9px 9px 9px 0 rgba(0, 0, 0, 0.05);*/
 }
@@ -113,7 +122,7 @@ header {
 }
 
 header h1 {
-    font-family: 'Futura', sans-serif;
+    font-family: "Futura", sans-serif;
     font-weight: 100;
     font-style: italic;
     color: rgb(54, 54, 54);
@@ -162,7 +171,7 @@ header h1 {
 
 .more_projects {
     font-size: 8px;
-    
+
     line-height: 30px;
     width: 150px;
     height: 30px;
@@ -226,11 +235,6 @@ img {
     height: 400px;
 }
 
-
-
-
-
-
 /* ABOUT.HTML */
 .about_me {
     display: grid;
@@ -280,10 +284,9 @@ img {
     font-size: 13px;
 }
 
-.links a:hover{
+.links a:hover {
     background-color: rgba(100, 148, 237, 0.75);
 }
-
 
 /* PROJECTS PAGE */
 .projects {
@@ -315,10 +318,7 @@ img {
     line-height: 1.5rem;
 }
 
-
-
-
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
     .intro {
         height: 70vh;
     }
@@ -329,7 +329,7 @@ img {
         font-size: 50px;
         font-style: bold;
     }
-    
+
     .intro p {
         color: rgb(54, 54, 54);
         margin: 0px 15%;
@@ -385,12 +385,11 @@ img {
         grid-template-rows: 350px 350px;
         justify-content: center;
     }
-    
+
     img {
         width: 100%;
         height: 400px;
     }
-
 
     .about_me {
         display: grid;
@@ -410,7 +409,7 @@ img {
         padding: 1rem;
         padding-right: 0px;
     }
-    
+
     .about_me p {
         font-size: 10px;
         padding-top: 1rem;
@@ -419,7 +418,7 @@ img {
         padding-right: 0px;
         line-height: 1rem;
     }
-    
+
     .tim {
         object-fit: cover;
         max-width: 100%;
@@ -432,8 +431,7 @@ img {
     }
 }
 
-@media screen and (min-width: 1050px){
-
+@media screen and (min-width: 1050px) {
     .projects {
         grid-template-columns: 400px 500px;
         grid-template-rows: 400px 400px;
@@ -450,7 +448,7 @@ img {
     .projects h1 {
         margin: 0px;
     }
- 
+
     .projects img {
         width: 100%;
         height: 100%;
@@ -459,8 +457,8 @@ img {
     }
 
     .ht {
-        grid-column: 1 /span 1;
-        grid-row: 2 /span 1;
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
     }
 
     header {
@@ -470,7 +468,7 @@ img {
     .intro h2 {
         font-size: 60px;
     }
-    
+
     .intro p {
         font-size: 30px;
     }
@@ -484,14 +482,13 @@ img {
 
     .container {
         margin: 0px 15% 0px;
-        grid-template-columns: 50% 50%/*600px 600px*/;
+        grid-template-columns: 50% 50% /*600px 600px*/;
         grid-column-gap: 60px;
         grid-row-gap: 60px;
         grid-template-rows: 600px 600px;
         justify-content: center;
-        
     }
-    
+
     img {
         width: 600px;
         height: 600px;
@@ -536,7 +533,7 @@ img {
         padding: 1rem;
         padding-right: 0px;
     }
-    
+
     .about_me p {
         font-size: 13px;
         padding-top: 1rem;
@@ -545,7 +542,7 @@ img {
         padding-right: 0px;
         line-height: 1.5rem;
     }
-    
+
     .tim {
         object-fit: cover;
         max-width: 100%;
@@ -560,24 +557,24 @@ form {
     border-radius: 30px;
     padding: 60px;
 }
-  
-legend { 
+
+legend {
     font-size: 20px;
     font-weight: 500;
     text-align: center;
     margin-bottom: 20px;
 }
-  
-label{
+
+label {
     display: inline-block;
-    margin-right:10px;
-    width:15%;
+    margin-right: 10px;
+    width: 15%;
     font-size: 13px;
 }
 
 input {
     font-size: 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -587,8 +584,8 @@ input {
     border-radius: 6px;
 }
 
-textarea{
-    font-family: 'Poppins', sans-serif;
+textarea {
+    font-family: "Poppins", sans-serif;
     font-size: 10px;
     width: 100%;
     height: 10vh;
@@ -600,12 +597,12 @@ textarea{
     border-radius: 6px;
 }
 
-input[type=checkbox]{
-    display:inline;
-    width:inherit;
+input[type="checkbox"] {
+    display: inline;
+    width: inherit;
 }
-  
-input[type=submit] {
+
+input[type="submit"] {
     background-color: cornflowerblue;
     color: #f0f0f3;
     padding: 14px 20px;
@@ -614,25 +611,25 @@ input[type=submit] {
     cursor: pointer;
     width: 100%;
 }
-  
-input[type=submit]:hover {
+
+input[type="submit"]:hover {
     opacity: 0.8;
 }
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (min-width: 770px) {
-    form{
-      width: 40%;
-      margin: 0 auto;
+    form {
+        width: 40%;
+        margin: 0 auto;
     }
-  
-    input{
-      width:80%;
+
+    input {
+        width: 80%;
     }
-  
-    textarea{
-      width:80%;
-      height: 10vh;
+
+    textarea {
+        width: 80%;
+        height: 10vh;
     }
 
     div + label {
