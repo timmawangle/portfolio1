@@ -85,8 +85,7 @@ html,body
     padding: 10px;
 }
 
-.nav_item a:hover,
-a:focus {
+.nav_item a:hover, a:focus {
     border: none;
     background-color: #dbdbdb;
     transition: background-color 0.2s ease-in;
@@ -96,6 +95,9 @@ a:focus {
 
 .nav_item a.current {
     color: cornflowerblue;
+    border: none;
+    background-color: #dbdbdb;
+    transition: background-color 0.2s ease-in;
     /*border-radius: 30px;*/
     padding: 3px 12px;
     /*box-shadow: inset -9px -9px 9px 0 rgba(255, 255, 255, 0.4), 
@@ -158,6 +160,7 @@ header h1 {
 
 .learn_more_bio {
     background-color: cornflowerblue;
+    text-decoration: none;
     text-align: center;
     line-height: 30px;
     color: #f0f0f3;
@@ -166,10 +169,10 @@ header h1 {
     border-radius: 4px;
     /*box-shadow: -9px -9px 9px 0 rgba(255, 255, 255, 0.8), 
                  9px 9px 9px 0 rgba(0, 0, 0, 0.05);*/
-    margin-right: 20px;
 }
 
 .more_projects {
+    margin-left: 20px;
     font-size: 8px;
 
     line-height: 30px;
@@ -181,9 +184,16 @@ header h1 {
 }
 
 .learn_more_bio:hover {
+    /*
     background-color: rgba(100, 148, 237, 0.9);
     color: cornflowerblue;
     cursor: pointer;
+    */
+    opacity: 0.9;
+}
+
+.more_buttons a {
+    text-decoration: none;
 }
 
 /*
@@ -212,11 +222,12 @@ header h1 {
 }
 
 .container {
+    position: relative;
     margin: 0px 10% 0px;
     background-color: #f0f0f3;
     display: grid;
     grid-template-columns: 85vw;
-    grid-template-rows: 400px 400px 400px 400px;
+    grid-template-rows: 400px 400px;
     grid-row-gap: 7.5vw;
     justify-content: center;
     padding-bottom: 15vh;
@@ -234,6 +245,65 @@ img {
     width: 85vw;
     height: 400px;
 }
+
+.img-one, .img-two {
+    position: relative;
+}
+
+.img-one:hover, .img-two:hover {
+    padding: 5px;
+    transition: padding .2s ease-in;
+}
+
+.img-one:hover .info, .img-two:hover .info{
+    visibility: visible;
+    opacity: 1;
+}
+
+.info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: rgb(80, 80, 80);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s ease-in, visibility .4s ease-in;
+}
+/* FLIP CARD 
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 750px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+*/
 
 /* ABOUT.HTML */
 .about_me {
@@ -320,11 +390,11 @@ img {
 
 @media screen and (min-width: 600px) {
     .intro {
-        height: 70vh;
+        height: 50vh;
     }
 
     .intro h2 {
-        padding: 20vh 15% 15px;
+        padding: 15vh 15% 15px;
         color: rgb(54, 54, 54);
         font-size: 50px;
         font-style: bold;
@@ -382,13 +452,25 @@ img {
         grid-template-columns: 100%;
         grid-column-gap: 50px;
         grid-row-gap: 50px;
-        grid-template-rows: 350px 350px;
+        grid-template-rows: 400px 400px;
         justify-content: center;
     }
 
     img {
         width: 100%;
         height: 400px;
+    }
+
+    .info {
+        position: absolute;
+        top: 10%;
+        left: 6%;
+        transform: none;
+        font-size: 10px;
+        color: rgb(80, 80, 80);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .4s ease-in, visibility .4s ease-in;
     }
 
     .about_me {
@@ -432,6 +514,10 @@ img {
 }
 
 @media screen and (min-width: 1050px) {
+    .intro {
+        height: 60vh;
+    }
+
     .projects {
         grid-template-columns: 400px 500px;
         grid-template-rows: 400px 400px;
@@ -466,6 +552,7 @@ img {
     }
 
     .intro h2 {
+        padding-top: 18vh;
         font-size: 60px;
     }
 
@@ -479,21 +566,40 @@ img {
         left: 25%;
         top: 100px;
     }
-
+    /*
     .container {
         margin: 0px 15% 0px;
-        grid-template-columns: 50% 50% /*600px 600px*/;
-        grid-column-gap: 60px;
-        grid-row-gap: 60px;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 2em;
+        grid-row-gap: 2em;
         grid-template-rows: 600px 600px;
         justify-content: center;
     }
-
+    
     img {
-        width: 600px;
+        width: 100%;
         height: 600px;
+    */
+    .container {
+        grid-template-rows: auto auto;
     }
 
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info {
+        position: absolute;
+        top: 10%;
+        left: 8%;
+        font-size: 16px;
+        color: rgb(80, 80, 80);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .4s ease-in, visibility .4s ease-in;
+    }
+    
     .about_me h1 {
         font-size: 60px;
     }
