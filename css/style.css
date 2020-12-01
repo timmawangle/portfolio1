@@ -1,15 +1,18 @@
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
     font-family: "Poppins", sans-serif;
     color: rgb(54, 54, 54);
     background-color: #f0f0f3;
+    min-height: 100%;
 }
 
 html,body
 {
+    position: relative;
     width: 100%;
     margin: 0px;
     padding: 0px;
@@ -68,6 +71,7 @@ html,body
 .nav_links.open {
     clip-path: circle(1150px at 90% -10%);
     -webkit-clip-path: circle(1150px at 90% -10%);
+    z-index: 999998;
     pointer-events: all;
 }
 
@@ -120,7 +124,7 @@ header {
     cursor: pointer;
     right: 5px;
     top: 10px;
-    z-index: 2;
+    z-index: 999999;
 }
 
 header h1 {
@@ -359,6 +363,15 @@ img {
 }
 
 /* PROJECTS PAGE */
+.bobile {
+    background-image: url("../imgs/Artboard1.jpg");
+    background-color: blue;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .projects {
     display: grid;
     grid-template-columns: 1fr;
@@ -390,11 +403,11 @@ img {
 
 @media screen and (min-width: 600px) {
     .intro {
-        height: 50vh;
+        height: 550px;
     }
 
     .intro h2 {
-        padding: 15vh 15% 15px;
+        padding: 150px 15% 15px;
         color: rgb(54, 54, 54);
         font-size: 50px;
         font-style: bold;
@@ -476,7 +489,9 @@ img {
     .about_me {
         display: grid;
         grid-template-columns: 250px 300px;
+        grid-template-rows: 550px 50px;
         grid-column-gap: 1rem;
+        grid-row-gap: 0;
         margin: 0px;
         padding: 0px 2em 0px;
         margin-top: 7vh;
@@ -509,13 +524,15 @@ img {
 
     .links {
         flex-direction: row;
-        height: 50px;
+        padding: 0;
+        margin: 0;
+        grid-column: 1 / 3;
     }
 }
 
 @media screen and (min-width: 1050px) {
     .intro {
-        height: 60vh;
+        height: 706px;
     }
 
     .projects {
@@ -552,7 +569,7 @@ img {
     }
 
     .intro h2 {
-        padding-top: 18vh;
+        padding-top: 212px;
         font-size: 60px;
     }
 
@@ -624,6 +641,7 @@ img {
     .about_me {
         display: grid;
         grid-template-columns: 400px 500px;
+        grid-template-rows: 650px 50px;
         grid-column-gap: 1rem;
         margin: 0px;
         padding: 0px;
@@ -658,9 +676,9 @@ img {
 
 /*FORM STYLING*/
 form {
-    margin-top: 7vh;
+    margin-top: 50px;
     border: 3px solid #f0f0f3;
-    border-radius: 30px;
+    border-radius: 15px;
     padding: 60px;
 }
 
@@ -727,6 +745,7 @@ input[type="submit"]:hover {
     form {
         width: 40%;
         margin: 0 auto;
+        margin-top: 100px;
     }
 
     input {
@@ -744,57 +763,68 @@ input[type="submit"]:hover {
     }
 }
 
+.g-block {
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+}
+
 .gcontainer {
+    margin: auto;
+    width: 1000px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /*grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px 400px 400px;
     grid-column-gap: 10px;
-    grid-row-gap: 10px;*/
-    margin: 20px;
-    width: 100vw;
-    overflow: hidden;
+    grid-row-gap: 10px;
+    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+    padding-top: 20px;
+    padding-bottom: 200px;
 }
 
 .gcontainer img {
     object-fit: cover;
-    display: block;
-    max-width: 400px;
-    max-height: 400px;
-    width: auto;
-    height: auto;
+    width: 400px;
+    height: 400px;
 }
 
-/*
-.img-1 {
-    grid-column: 1 / 2;
-    grid-row: 1 /2;
+.flip-card {
+    background-color: transparent;
+    width: 1fr;
+    height: 400px;
 }
-.img-2 {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
-.img-3 {
-    grid-column: 3 / 4;
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
 }
-.img-4 {
-    grid-column: 1 / 2;
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
 }
-.img-5 {
-    grid-column: 2 / 3;
+
+.flip-card-front {
 }
-.img-6 {
-    grid-column: 3 / 4;
+
+.flip-card-back {
+    position: relative;
+    background-color: black;
+    color: #dbdbdb;
+    transform: rotateY(180deg);
 }
-.img-7 {
-    grid-column: 1 / 2;
-}
-.img-8 {
-    grid-column: 2 / 3;
-}
-.img-9 {
-    grid-column: 3 / 4;
-}
-*/
 
 footer {
     display: flex;
@@ -803,7 +833,7 @@ footer {
 
     height: 60px;
     font-size: 13px;
-    position: relative;
+    position: absolute;
     bottom: 0px;
     width: 100vw;
     text-align: center;
