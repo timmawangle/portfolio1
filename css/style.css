@@ -817,10 +817,11 @@ input[type="submit"]:hover {
 }
 
 .flip-card-front {
+    background-color: white;
+    color: black;
 }
 
 .flip-card-back {
-    position: relative;
     background-color: black;
     color: #dbdbdb;
     transform: rotateY(180deg);
