@@ -139,11 +139,6 @@ header h1 {
     height: 350px;
 }
 
-@keyframes slide {
-    from {bottom: -50px; opacity: 0;}
-    to {bottom: 0px; opacity: 1;}
-}
-
 .intro h2 {
     padding: 80px 10% 15px;
     color: rgb(54, 54, 54);
@@ -162,6 +157,12 @@ header h1 {
     animation-name: slide;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+}
+
+
+@keyframes slide {
+    from {bottom: -50px; opacity: 0;}
+    to {bottom: 0px; opacity: 1;}
 }
 
 .intro p b {
