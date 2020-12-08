@@ -139,6 +139,11 @@ header h1 {
     height: 350px;
 }
 
+@keyframes slide {
+    from {bottom: -50px; opacity: 0;}
+    to {bottom: 0px; opacity: 1;}
+}
+
 .intro h2 {
     padding: 80px 10% 15px;
     color: rgb(54, 54, 54);
@@ -152,6 +157,13 @@ header h1 {
     font-size: 15px;
 }
 
+.intro h2, .intro p {
+    position: relative;
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
 .intro p b {
     color: cornflowerblue;
 }
@@ -160,6 +172,14 @@ header h1 {
     display: flex;
     font-size: 9px;
     padding: 25px 10% 15%;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fade {
+    from {opacity: 0.5;}
+    to {opacity: 1;}
 }
 
 .learn_more_bio {
@@ -216,6 +236,9 @@ header h1 {
     grid-row-gap: 7.5vw;
     justify-content: center;
     padding-bottom: 15vh;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
 }
 
 /*div {
@@ -958,7 +981,10 @@ input[type="submit"]:hover {
     transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card:hover .flip-card-inner, 
+.flip-card:focus-within .flip-card-inner,
+.flip-card:active .flip-card-inner,
+.flip-card:focus .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -999,4 +1025,27 @@ footer {
     text-align: center;
     padding: 30px 0px;
     color: rgb(54, 54, 54);
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; /* Removes scroll animation */
+    }
+  
+    .skip a{
+      -webkit-transition: none; /* sets to default setting */
+      transition: none;        /* sets to default setting */
+    }
+
+    .container {
+        animation: none;
+    }
+     
+    .intro h2, .intro p {
+        animation: none;
+    }
+
+    .more_buttons {
+        animation: none;
+    }
 }
